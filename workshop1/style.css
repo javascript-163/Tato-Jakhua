@@ -1,3 +1,26 @@
+body {
+  background: hsla(212, 13%, 41%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(212, 13%, 41%, 1) 0%,
+    rgb(62, 59, 59) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(212, 13%, 41%, 1) 0%,
+    rgb(63, 51, 50) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5A6776", endColorstr="#FF7B74", GradientType=1 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Salsa", cursive;
+}
+
 h1 {
-  color: blue;
+  color: #ffb534;
+  font-size: 2.5rem;
 }
