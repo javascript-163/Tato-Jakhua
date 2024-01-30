@@ -90,13 +90,33 @@ passwordCheckerFunc(password);
 
 //Task 5
 let correctAnswers = 0;
+const questions = [
+  { question: "How many types are there in JavaScript?", answer: "8" },
+  {
+    question:
+      "Function is a primitive data type in JavaScript! Enter 'true' or 'false'.",
+    answer: "false",
+  },
+  {
+    question: `An empty string ("" === true) is not true. Enter 'true' or 'false'.`,
+    answer: "true",
+  },
+  {
+    question:
+      "The information entered in the prompt is interpreted as a string with numbers between them. Answer 'true' or 'false.'",
+    answer: "true",
+  },
+  {
+    question:
+      "JavaScript is an asynchronous, single-threaded, non-blocking language. Enter 'true' or 'false'.",
+    answer: "false",
+  },
+];
 
 function askQuestion(question, correctAnswer) {
   let userAnswer = prompt(question);
-
   if (correctAnswer === userAnswer) {
     alert("Correct!");
-    correctAnswers++;
     return true;
   } else {
     alert("Incorrect, Better luck next time!");
@@ -104,54 +124,20 @@ function askQuestion(question, correctAnswer) {
   }
 }
 
-if (askQuestion("How many types are there in JavaScript?", "8")) {
-  if (
-    askQuestion(
-      "Function is a primitive data type in JavaScript! Enter 'true' or 'false'.",
-      "false"
-    )
-  ) {
-    if (
-      askQuestion(
-        `An empty string ("" === true) is not true. Enter 'true' or 'false'.`,
-        "true"
-      )
-    ) {
-      if (
-        askQuestion(
-          "The information entered in the prompt is interpreted as a string with numbers between them. Answer 'true' or 'false.'",
-          "true"
-        )
-      ) {
-        if (
-          askQuestion(
-            "JavaScript is an asynchronous, single-threaded, non-blocking language. Enter 'true' or 'false'.",
-            "false"
-          )
-        ) {
-          alert("Good job! You answered all the questions correctly");
-        } else {
-          alert(
-            `You answered ${correctAnswers} out of 5 question correctly. Keep going!`
-          );
-        }
-      } else {
-        alert(
-          `You answered ${correctAnswers} out of 5 question correctly. Keep going!`
-        );
-      }
-    } else {
-      alert(
-        `You answered ${correctAnswers} out of 5 question correctly. Keep going!`
-      );
-    }
-  } else {
+for (let i = 0; i < questions.length; i++) {
+  if (!askQuestion(questions[i].question, questions[i].answer)) {
     alert(
-      `You answered ${correctAnswers} out of 5 question correctly. Keep going!`
+      `You answered ${correctAnswers} out of ${i} questions correctly. Keep going!`
     );
+    break;
   }
+  correctAnswers++;
+}
+
+if (correctAnswers === questions.length) {
+  alert("Good job! You answered all the questions correctly.");
 } else {
-  alert("You didn't answer the first question correctly. The quiz ends here.");
+  alert("You didn't answer all questions correctly. The quiz ends here.");
 }
 
 //---------//
