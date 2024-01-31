@@ -127,7 +127,7 @@ function askQuestion(question, correctAnswer) {
 for (let i = 0; i < questions.length; i++) {
   if (!askQuestion(questions[i].question, questions[i].answer)) {
     alert(
-      `You answered ${correctAnswers} out of ${i} questions correctly. Keep going!`
+      `You answered ${correctAnswers} out of 5 questions correctly. Keep going!`
     );
     break;
   }
