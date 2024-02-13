@@ -9,6 +9,54 @@
   </head>
   <body>
     <h1>JavaScript PlayGround</h1>
-    <script text="text/javascript" src="script/script.js"></script>
+    <img alt="baby-Picture" src="people.png" width="240px" />
+    <div id="btn-container">
+      <button id="imgbtn" class="incr" onclick="imgResolutionHandler(true)">
+        Increment Resolutions
+      </button>
+      <button class="decr" id="imgbtn" onclick="imgResolutionHandler()">
+        Decrement Resolutions
+      </button>
+    </div>
+    <p id="simple-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+    <div id="text-btn-container">
+      <div class="button-wrapper">
+        <label id="light-red">dark red</label>
+        <button id="" onclick="changeColorText('bf3131')" class="button-92">
+          Change Color
+        </button>
+      </div>
+      <div class="button-wrapper">
+        <label id="light-yellow">light yellow</label>
+        <button onclick="changeColorText('fff78a')" class="button-92">
+          Change Color
+        </button>
+      </div>
+      <div class="button-wrapper">
+        <label id="light-blue">light-blue</label>
+        <button onclick="changeColorText('6db9ef')" class="button-92">
+          Change Color
+        </button>
+      </div>
+    </div>
+    <div>
+      <button class="button-57" role="button" onclick="showContent()">
+        <span class="text">Hover me</span><span>Show Content</span>
+      </button>
+      <button class="button-57" role="button" onclick="hideContent()">
+        <span class="text">Hover me</span><span>Hide Content</span>
+      </button>
+    </div>
   </body>
+  <script text="text/javascript" src="script/script.js"></script>
 </html>

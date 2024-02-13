@@ -1,54 +1,37 @@
-class Shape {
-  constructor(name) {
-    this.name = name;
-  }
+//1 სხვადასხვა ღილაკი, 1. ფოტოს ზომის გადიდების; 2. ფოტოს ზომის შემცირების;
+// DOM-ის მეშვეობით გააკეთეთ ისე, რომ ფოტოს ზომის გაზრდისა და ზომის შემცირების ღილაკებზე დაჭერით არსებული სურათის ზომა (width) შეიცვალოს.
+// რაღაც ესეთი
 
-  area() {
-    return "Area calculation not implemented for generic shape.";
-  }
+let count = 240;
+
+function imgResolutionHandler(increment) {
+  const img = document.querySelector("img");
+
+  increment ? (count += 10) : (count -= 10);
+
+  count = Math.max(0, count);
+
+  img.style.width = count + "px";
 }
 
-class Circle extends Shape {
-  constructor(name, radius) {
-    super(name);
-    this.radius = radius;
-  }
+//2 შექმენით ვებგვერდი რომელზეც იქნება მოცემული ტექსტის ფერის შემცვლელი ღილაკი. მოცემულობა ესეთია:
+//  მომხმარებელი აჭერს ღილაკზე, ღილაკი ცვლის ფერს.
+//  ეკრანზე მოცემული ტექსტი იცვლება იმ ფერის სახელით რა ფერის ტექსტიცაა ეკრანზე გამოტანილი. ნახეთ მაგალითი ფოტოზე.
 
-  area() {
-    return `${Math.PI * this.radius * this.radius} ${this.name}`;
-  }
+function changeColorText(color) {
+  const pTag = document.getElementById("simple-text");
+  pTag.style.color = `#${color}`;
 }
 
-class Rectangle extends Shape {
-  constructor(name, width, height) {
-    super(name);
-    this.width = width;
-    this.height = height;
-  }
+//3. შექმენით ვებგვერდი რომელზეც იქნება მოცემული კონტენტის ჩვენებისა და დამალვის ღილაკი. მოცემულ ღილაკზე დაჭერისას უნდა მოხდეს კონტენტის გამოტანა
+// ეკრანზე თუ კონტენტი დამალულია. ხოლო თუ კონტენტი ჩანს ეკრანზე ამ შემთხვევაში მისი დამალვა.
 
-  area() {
-    return `${this.width * this.height} ${this.name}`;
-  }
+function showContent() {
+  document.getElementById("simple-text").style.visibility = "visible";
+  document.getElementById("text-btn-container").style.visibility = "visible";
 }
 
-class Triangle extends Shape {
-  constructor(name, base, height) {
-    super(name);
-    this.base = base;
-    this.height = height;
-  }
-
-  area() {
-    return `${(this.base * this.height) / 2} ${this.name}`;
-  }
+function hideContent() {
+  document.getElementById("simple-text").style.visibility = "hidden";
+  document.getElementById("text-btn-container").style.visibility = "hidden";
 }
-
-const Parent = new Shape("");
-const CircleChilde = new Circle("Circle", 5);
-const RectangleChild = new Rectangle("Rectangle", 5, 10);
-const TriangleChild = new Triangle("Triangle", 3, 7);
-
-Parent.area();
-CircleChilde.area();
-RectangleChild.area();
-TriangleChild.area();
