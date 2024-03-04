@@ -1,0 +1,55 @@
+body {
+  background: hsla(212, 13%, 41%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(212, 13%, 41%, 1) 0%,
+    rgb(62, 59, 59) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(212, 13%, 41%, 1) 0%,
+    rgb(63, 51, 50) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Salsa", cursive;
+}
+
+h1 {
+  color: #ffb534;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+textarea {
+  background-color: #dddddd;
+  color: #666666;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 400px;
+  min-height: 100px;
+  transition: all 0.2s;
+}
+textarea:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+textarea:focus {
+  cursor: text;
+  color: #333333;
+  background-color: white;
+  border: 2px solid #333333;
+}
+#uloadBtn {
+  display: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript PlayGround</title>
+    <link rel="shortcut icon" type="x-icon" href="js.jpg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>JavaScript PlayGround</h1>
+    <section>
+      <textarea></textarea>
+      <div>
+        <input type="file" name="text" id="uloadBtn" />
+        <label for="uloadBtn">Upload File</label>
+        <button onclick="loadFile()">read file</button>
+      </div>
+      <div style="display: none" class="content">
+        <p class="Total-Symbols"></p>
+        <p class="Total-Words"></p>
+        <p class="L-word"></p>
+        <p class="L-word"></p>
+        <p class="S-word"></p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <input type="file" name="img" id="uloadBtn" />
+        <label for="uloadBtn">Upload File</label>
+        <button onclick="loadImage()">read img</button>
+        <img alt="picture" id="img" style="display: none" />
+      </div>
+    </section>
+    <section>
+      <div>
+        <input type="file" name="file" id="uloadBtn" />
+        <label for="uloadBtn">Upload File</label>
+        <button onclick="handleTargetInitialFunc()">read file</button>
+      </div>
+    </section>
+  </body>
+  <script text="text/javascript" src="script/script.js"></script>
+</html>
